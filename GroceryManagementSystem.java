@@ -31,4 +31,6 @@ public class GroceryManagementSystem {
       }
     }
   }
+
+  public static void restockItem(String[] names, int[] stocks, String target, int amount) {}
 }
