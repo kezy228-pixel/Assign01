@@ -7,6 +7,6 @@ Group Members: Adiyat Abubakirov, Yahya Bhara, Benjamin Guzman, Sarthak Sapkota.
 | -------------- | --------------- |
 | Adiyat Abubakirov | kezy228-pixel |
 | Yahya Bhara | Item2.2 |
-| Benjamin Guzman | Item2.3 |
-| Sarthak Sapkota | Item2.3 |
+| Benjamin Guzman | Integral886 |
+| Sarthak Sapkota | sarthak2344 |
 
