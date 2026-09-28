@@ -21,5 +21,7 @@ public class GroceryManagementSystem {
     itemStocks[2] = 0;
   }
 
-  public static void printInventory(String[] names, double[] prices, int[] stocks) {}
+  public static void printInventory(String[] names, double[] prices, int[] stocks) {
+    for (int i = 0; i < names.length; i++) {}
+  }
 }
