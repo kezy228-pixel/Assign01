@@ -23,7 +23,34 @@ public class GroceryManagementSystem {
     itemStocks[2] = 0;
     Scanner scanner = new Scanner(System.in);
 
-    while (true) {}
+    while (true) {
+      System.out.println("\n--- Grocery Management System ---");
+      System.out.println("1. View Inventory");
+      System.out.println("2. Restock Item");
+      System.out.println("3. Exit");
+      System.out.print("Enter your choice (1-3): ");
+
+      String choice = scanner.nextLine();
+
+      switch (choice) {
+        case "1":
+          printInventory(itemNames, itemPrices, itemStocks);
+          break;
+        case "2":
+          System.out.print("Enter item name to restock: ");
+          String target = scanner.nextLine();
+          System.out.print("Enter amount to add: ");
+          int amount = Integer.parseInt(scanner.nextLine());
+          restockItem(itemNames, itemStocks, target, amount);
+          break;
+        case "3":
+          System.out.println("Exiting system. Goodbye!");
+          scanner.close();
+          return;
+        default:
+          System.out.println("Invalid choice. Please try again.");
+      }
+    }
   }
 
   /**
