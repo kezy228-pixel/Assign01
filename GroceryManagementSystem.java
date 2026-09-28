@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * The GroceryManagementSystem class provides a console-based application to manage a grocery
  * store's inventory.
@@ -19,6 +21,9 @@ public class GroceryManagementSystem {
     itemNames[2] = "Orange";
     itemPrices[2] = 1.50;
     itemStocks[2] = 0;
+    Scanner scanner = new Scanner(System.in);
+
+    while (true) {}
   }
 
   /**
@@ -48,17 +53,17 @@ public class GroceryManagementSystem {
    * @param amount The amount to add to the stock.
    */
   public static void restockItem(String[] names, int[] stocks, String target, int amount) {
-        boolean found = false;
-        for (int i = 0; i < names.length; i++) {
-            if (names[i] != null && names[i].equalsIgnoreCase(target)) {
-                stocks[i] += amount;
-                System.out.println("Successfully restocked " + target + ". New stock: " + stocks[i]);
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            System.out.println("Item not found.");
-        }
+    boolean found = false;
+    for (int i = 0; i < names.length; i++) {
+      if (names[i] != null && names[i].equalsIgnoreCase(target)) {
+        stocks[i] += amount;
+        System.out.println("Successfully restocked " + target + ". New stock: " + stocks[i]);
+        found = true;
+        break;
+      }
     }
+    if (!found) {
+      System.out.println("Item not found.");
+    }
+  }
 }
