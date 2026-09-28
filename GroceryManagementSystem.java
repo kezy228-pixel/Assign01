@@ -20,4 +20,6 @@ public class GroceryManagementSystem {
     itemPrices[2] = 1.50;
     itemStocks[2] = 0;
   }
+
+  public static void printInventory(String[] names, double[] prices, int[] stocks) {}
 }
