@@ -47,5 +47,9 @@ public class GroceryManagementSystem {
    * @param target The name of the item to restock.
    * @param amount The amount to add to the stock.
    */
-  public static void restockItem(String[] names, int[] stocks, String target, int amount) {}
+  public static void restockItem(String[] names, int[] stocks, String target, int amount) {
+    for (int i = 0; i < names.length; i++) {
+      if (names[i] != null && names[i].equalsIgnoreCase(target)) {}
+    }
+  }
 }
