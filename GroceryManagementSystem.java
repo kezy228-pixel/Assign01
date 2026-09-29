@@ -6,6 +6,12 @@ import java.util.Scanner;
  */
 public class GroceryManagementSystem {
 
+  /**
+   * Runs the interactive grocery menu. Loops until the user chooses to exit, letting them view the
+   * inventory or restock an item.
+   *
+   * @param args command-line arguments (not used).
+   */
   public static void main(String[] args) {
     String[] itemNames = new String[10];
     double[] itemPrices = new double[10];
@@ -40,8 +46,12 @@ public class GroceryManagementSystem {
           System.out.print("Enter item name to restock: ");
           String target = scanner.nextLine();
           System.out.print("Enter amount to add: ");
-          int amount = Integer.parseInt(scanner.nextLine());
-          restockItem(itemNames, itemStocks, target, amount);
+          try {
+            int amount = Integer.parseInt(scanner.nextLine());
+            restockItem(itemNames, itemStocks, target, amount);
+          } catch (NumberFormatException e) {
+            System.out.println("Invalid amount. Please enter a whole number.");
+          }
           break;
         case "3":
           System.out.println("Exiting system. Goodbye!");
