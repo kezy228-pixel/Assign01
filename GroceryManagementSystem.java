@@ -20,4 +20,22 @@ public class GroceryManagementSystem {
     itemPrices[2] = 1.50;
     itemStocks[2] = 0;
   }
+
+  /**
+   * Prints the current inventory to the console.
+   *
+   * @param names Array of item names.
+   * @param prices Array of item prices.
+   * @param stocks Array of item stock quantities.
+   */
+  public static void printInventory(String[] names, double[] prices, int[] stocks) {
+    for (int i = 0; i < names.length; i++) {
+      if (names[i] != null) {
+        System.out.printf(
+            "%d. %-15s | Price: $%.2f | Stock: %d%n", (i + 1), names[i], prices[i], stocks[i]);
+      } else {
+        // Empty slot, skipped
+      }
+    }
+  }
 }
